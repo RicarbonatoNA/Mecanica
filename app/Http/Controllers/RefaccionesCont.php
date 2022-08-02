@@ -16,7 +16,7 @@ class RefaccionesCont extends Controller
         ]);
 
         if($validator->fails()){
-                return response()->json($validator->errors()->toJson(),418);
+            return response()->json($validator->errors()->toJson(),418);
         }
         $refacciones = refacciones::create([
             'id' =>$request->id,
